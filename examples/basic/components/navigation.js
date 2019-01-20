@@ -16,7 +16,8 @@ const Navigation = props => (
               href="about"
               onClick={e => {
                 e.preventDefault()
-                props.push({ pathname: '/about', query: { foo: 'bar' } })
+                props.push({ pathname: '/about', query: { foo: 'bar' } }, '/about-home?foo=bar', { shallow: false })
+                //props.push('/about', '/about-home?foo=bar', { shallow: false, query: { foo: 'bar' } })
               }}
             >
               Push /about
@@ -66,8 +67,8 @@ const Navigation = props => (
             </Link>
           </li>
           <li>
-            <Link href="/about?foo=bar" replace>
-              <a>Replace /about</a>
+            <Link href="/about-home?foo=bar" replace>
+              <a>Replace /about-home</a>
             </Link>
           </li>
         </ul>
@@ -80,7 +81,7 @@ const Navigation = props => (
               href="about"
               onClick={e => {
                 e.preventDefault()
-                Router.push('/about?foo=bar')
+                Router.push('/about-home?foo=bar')
               }}
             >
               Push /about
@@ -107,7 +108,7 @@ const Navigation = props => (
           href="about"
           onClick={e => {
             e.preventDefault()
-            props.prefetch('/about')
+            props.prefetch('/about-home')
           }}
         >
           Prefetch /about

@@ -5,3 +5,13 @@ node_modules
 lib
 umd
 .next
+/structure
+/utils
+/es
+actions.js
+ConnectedRouter.js
+index.js
+middleware.js
+patchRouter.js
+reducer.js
+routerMethods.js

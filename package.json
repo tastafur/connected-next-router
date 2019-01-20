@@ -63,5 +63,8 @@
   },
   "bugs": {
     "url": "https://github.com/danielr18/connected-next-router/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
   }
 }
